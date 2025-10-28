@@ -14,6 +14,16 @@ body {
     --container: 1100px;
 }
 
+/* Image */
+img {
+    max-width: 100%;
+    max-height: 50%;
+    object-fit: cover   ;
+}
+.img-profile {
+    border-radius: 50%;
+}
+
 /* Layout helpers */
 .container{
     max-width: var(--container);
@@ -218,6 +228,13 @@ nav {
     min-width: 300px;
     padding: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    width: 30%;
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #div-50:hover {
@@ -230,10 +247,38 @@ nav {
     min-width: 300px;
 }
 
-.hero-inner h1 {
-    margin: 0 0 8px 0;
-    font-size: clamp(1.6rem,2.6vw,2.4rem);
+.name {
+    font-family: poppins, sans-serif;
+    font-size: 4rem;
     color: #0b1220;
+    margin-bottom: 10px;
+}
+
+.typewriter {
+    font-family: poppins, sans-serif;
+    margin-inline: auto;
+    font-size: 1.5rem;
+    overflow: hidden;
+    /* Keeps on a single line */
+    white-space: nowrap;
+    /* The cursor */
+    /* border-right: 1px solid; */
+    /* Steps = number of characters */
+    animation: typing 3s steps(22) forwards, blink 1s step-end infinite;
+    color: #0b1220;
+}
+
+.typed {
+    color: #4f46e5;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
 }
 
 .hero-inner p {
@@ -267,12 +312,3 @@ nav {
 /* Mobile nav open state */
 .main-nav.open{display:block;background:var(--color-surface);position:absolute;left:0;right:0;top:60px;padding:12px}
 .main-nav.open ul{flex-direction:column;gap:10px}
-
-#div-50{
-    width: 30%;
-    display: inline-block;
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
