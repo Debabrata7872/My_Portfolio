@@ -67,6 +67,7 @@ section {
     transition: transform 220ms cubic-bezier(.2,.8,.2,1), box-shadow 220ms ease, border-color 220ms ease;
     will-change: transform, box-shadow;
 }
+
 /* Hover / focus lift for sections (mouse and keyboard) */
 section:hover,
 section:focus {
