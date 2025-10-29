@@ -1,77 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>My Portfolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css?v1.1">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+    <title>Debabrata Sahoo</title>
 </head>
+
 <body>
-    <header class="site-header">
-        <div class="container header-inner">
-            <a class="logo" href="#">My Portfolio</a>
-            <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="hamburger"></span>
-            </button>
+    <div class="container mt-5">
+        <!-- Introduction Section -->
+        <div class="row align-items-center">
+            <div class="col-7">
+                <br>
+                <h1 class="fw-bolder" style="font-size:4rem;">I'm <br> Debabrata Sahoo</h1>
+                <br>
+                <h2 style="font-size: 2rem;"">
+                        A <span class=" typed" style="color: #0a9fe9;"></span>
+                </h2>
+                <br>
+                <p class="fs-5">Leveraging recent credentials and a hands-on-keyboard passion for programming, I am prepared to
+                    deliver robust code and analytical insights to help build and optimize your most
+                    challenging projects.</p>
+                <br>
+                <br>
+                <!-- Social Media Icons -->
+                <a href="https://github.com/Debabrata7872" class="link-dark fs-4 px-3"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/debabrata-sahoo-b92b23271" class="link-dark fs-4 px-3"><i class="bi bi-linkedin"></i></a>
+                <a href="#facebook" class="link-dark fs-4 px-3"><i class="bi bi-facebook"></i></a>
+                <a href="#instagram" class="link-dark fs-4 px-3"><i class="bi bi-instagram"></i></a>
+
+
+            </div>
+            <div class="col-1"></div>
+            <div class="col-4">
+                <img src="./Images/profile.jpg" class="img-fluid rounded-circle" alt="Profile Picture" width="auto"
+                    height="200">
+            </div>
         </div>
-    </header>
-    <main>
-        <div class="container">
-            <section class="hero" style="pointer-events: none; background-color: #fff;">
-                <div id="div-50" style="border-color: none; box-shadow: none; background-color: transparent;">
-                    <h1 class="name" style="font-size: 4rem;">Debabrata<br>Sahoo</h1>
-                    <h1 style="font-size: 2rem;"">
-                        I'm a <span class="typed"></span>
-                    </h1>
-                    <p>I build thoughtful, accessible web experiences. I focus on clarity, performance and polish.</p>
-                    <p class="hero-cta"><a class="btn" href="#work">See my work</a></p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- About Section -->
+        <div id="about" class="row align-items-center">
+            <div class="col-4">
+                <h2 style="font-size: 2rem;">Skills</h2>
+                <br>
+                Java
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                        aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
                 </div>
                 <br>
-                <div id="div-50" style="border-radius: 50%; overflow: hidden;background-color: aquamarine;"><img class="img-profile" src="./Images/Profile.jpg" alt="Debabrata Sahoo"></div>
-            </section>
-
-            <section id="about" class="hero" style="background-color: #fff;">
-                <div class="div-50">
-                    <h2>About Me</h2>
-                    <p>Completed MCA and a strong foundation in programming languages. Eager to kick-start my career at your company, where I can leverage my knowledge, problem-solving skills, and passion for technology to contribute to innovative projects.</p>
+                Python
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
                 </div>
-                <div class="div-50">
-                    <h2>Skills</h2>
-                    <ul>
-                        <li>Proficient in HTML, CSS, JavaScript, and Python.</li>
-                        <li>Experience with front-end frameworks like React and Vue.js.</li>
-                        <li>Familiarity with back-end technologies such as Node.js and Django.</li>
-                        <li>Strong understanding of responsive design and web accessibility.</li>
-                        <li>Version control using Git and GitHub.</li>
-                    </ul>
+                <br>
+                C
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
                 </div>
-            </section>
-
-            <section id="work" class="projects" tabindex="0">
-                <h2>My Work</h2>
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <h3>Point of Sales</h3>
-                        <p>Short description about a recent project — problem, approach, result.</p>
-                        <p><a href="#" class="btn btn-sm">View</a></p>
-                    </article>
-                    <article class="project-card">
-                        <h3>Gym Management System</h3>
-                        <p>Short description about a recent project — problem, approach, result.</p>
-                        <p><a href="#" class="btn btn-sm">View</a></p>
-                    </article>
-                    <article class="project-card">
-                        <h3>Anxiety Relief System</h3>
-                        <p>Short description about a recent project — problem, approach, result.</p>
-                        <p><a href="#" class="btn btn-sm">View</a></p>
-                    </article>
+                <br>
+                SQL
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
                 </div>
-            </section>
+                <br>
+                HTML/CSS
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+                </div>
+                <br>
+                JavaScript
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-6">
+                <h2 style="font-size: 2rem;">About Me</h2>
+                <br>
+                <blockquote class="blockquote">
+                    <p>Completed MCA and a strong foundation in programming languages. Eager to kick-start my career at
+                    your company, where I can leverage my knowledge, problem-solving skills, and passion for
+                    technology to contribute to innovative projects.</p>
+                </blockquote>
+            </div>
         </div>
-    </main>
-    <script src="script.js" defer></script>
+        <br>
+        <br>
+        <!-- Projects Section -->
+         <br>
+        <div id="work" class="row align-items-center">
+            <h2 style="font-size: 2rem;">Projects</h2>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="col">
+                <div class="card" style="width: 20rem;">
+                    <img src="./Images/Weather.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Weather App</h5>
+                        <p class="card-text">A simple weather application that provides weather updates.</p>
+                        <a href="https://weatherapp-blush-sigma.vercel.app/" class="btn btn-primary">Go to Website</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 20rem;">
+                    <img src="./Images/Crypto.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Crypto Tracker</h5>
+                        <p class="card-text">A cryptocurrency tracking application that provides real-time price updates.</p>
+                        <a href="https://crypto-currency-tracker-zeta-ten.vercel.app/" class="btn btn-primary">Go to Website</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 20rem;">
+                    <img src="./Images/Gym.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Gym Management System</h5>
+                        <p class="card-text">This system that allows users to manage their workouts and track progress.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
     <footer id="contact" class="site-footer" role="contentinfo">
         <div class="footer-inner">
             <div class="footer-col footer-about">
@@ -90,14 +167,18 @@
             <div class="footer-col footer-social">
                 <h4>Follow</h4>
                 <ul class="social-list">
-                    <li><a href="https://github.com/Debabrata7872" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/debabrata-sahoo-b92b23271" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://github.com/Debabrata7872" target="_blank" rel="noopener noreferrer"><i class="bi bi-github">GitHub</i></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/debabrata-sahoo-b92b23271" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <small>&copy; 2025 My Portfolio — Built with ❤️. <span class="visually-hidden">All rights reserved.</span></small>
+            <small>&copy; 2025 My Portfolio — Built with ❤️. <span class="visually-hidden">All rights
+                    reserved.</span></small>
         </div>
     </footer>
 </body>
+
 </html>
