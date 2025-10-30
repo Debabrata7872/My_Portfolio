@@ -1,3 +1,9 @@
+/* Font styles */
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+h2{
+    font-family: 'Momo Trust Display', sans-serif;
+}
 /* Footer styles */
 .site-footer {
     background-color: #222;
