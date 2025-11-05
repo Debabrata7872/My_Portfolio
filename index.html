@@ -19,26 +19,34 @@
 </head>
 
 <body>
-    <ul class="nav justify-content-center">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-    </ul>
+    <!-- Navbar -->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#">Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active mx-4" aria-current="page" href="#home">Home</a>
+                        <a class="nav-link mx-4" href="#about">About Me</a>
+                        <a class="nav-link mx-4" href="#work">My Work</a>
+                        <a class="nav-link mx-4" href="#contact">Contact <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
     <div class="container mt-5">
         <!-- Introduction Section -->
-        <div class="row align-items-center pb-5 pt-5">
+        <div id="home" class="row align-items-center pb-5 pt-5">
             <div class="col-7">
                 <br>
-                <h1 class="fw-bolder" style="font-size:4rem;">I'm <br> Debabrata Sahoo</h1>
+                <h1 class="fw-bolder" style="font-size:4rem;"> I am <br> Debabrata Sahoo</h1>
                 <br>
                 <p class="fw-bold" style="font-size: 2rem;"">
                         A <span class=" typed" style="color: #0a9fe9;"></span>
@@ -141,7 +149,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Weather App</h5>
                         <p class="card-text">A simple weather application that provides weather updates.</p>
-                        <a href="https://weatherapp-blush-sigma.vercel.app/" class="btn btn-primary">Go to Website</a>
+                        <a href="https://weatherapp-blush-sigma.vercel.app/" class="btn btn-primary">Go to Website <i class="bi bi-box-arrow-up-right ms-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -153,18 +161,18 @@
                         <p class="card-text">A cryptocurrency tracking application that provides real-time price
                             updates.</p>
                         <a href="https://crypto-currency-tracker-zeta-ten.vercel.app/" class="btn btn-primary">Go to
-                            Website</a>
+                            Website <i class="bi bi-box-arrow-up-right ms-1"></i></a>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card" style="width: 20rem;">
-                    <img src="./Images/Gym.png" class="card-img-top" alt="...">
+                    <img src="./Images/Gym.png" class="card-img-top" alt="Gym Website">
                     <div class="card-body">
                         <h5 class="card-title">Gym Management System</h5>
                         <p class="card-text">This system that allows users to manage their workouts and track progress.
                         </p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Go to code <i class="bi bi-box-arrow-up-right ms-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -189,10 +197,10 @@
                 <h4>Follow</h4>
                 <ul class="social-list">
                     <li><a href="https://github.com/Debabrata7872" target="_blank" rel="noopener noreferrer"><i
-                                class="bi bi-github">GitHub</i></a>
+                                class="bi bi-github ms-1"></i> GitHub</a>
                     </li>
                     <li><a href="https://www.linkedin.com/in/debabrata-sahoo-b92b23271" target="_blank"
-                            rel="noopener noreferrer">LinkedIn</a></li>
+                            rel="noopener noreferrer"><i class="bi bi-linkedin ms-1"></i> LinkedIn</a></li>
                 </ul>
             </div>
         </div>
