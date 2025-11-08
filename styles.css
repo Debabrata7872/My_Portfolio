@@ -1,6 +1,8 @@
 /* Font styles */
 @import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Momo+Trust+Display&family=Saira:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+@import url("https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css");
+
 h1{
     font-family: 'ubuntu', sans-serif;
 }
@@ -23,6 +25,69 @@ li{
     font-family: 'saira', sans-serif;
     font-weight: 600;
 }
+
+/* Skill Loop */
+
+.icon-slider {
+  /* Restricts the visible area of the slider */
+  overflow: hidden; 
+  width: 100%;
+  /* Optional: Add padding or background as needed */
+  padding: 20px 0;
+}
+
+.slide-track {
+  /* Puts all icons in a single row */
+  display: flex;
+  /* Ensures the items don't wrap to the next line */
+  white-space: nowrap;
+  /* Adjust the total width based on the number and size of your icons */
+  width: fit-content; 
+  
+  /* Animation properties */
+  animation: scroll-left 20s linear infinite;
+}
+
+.icon-slider:hover .slide-track {
+  /* Pauses the animation when the user hovers over the slider */
+  animation-play-state: paused;
+}
+
+.icon {
+  /* Ensures icons stay in a row and don't shrink */
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.icon img {
+  width: 100%;
+  height: auto;
+}
+
+/* Keyframe animation for the scrolling effect */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(50%); 
+    }
+    100% {
+      transform: translateX(-100%); 
+    }
+  }
 
 /* Footer styles */
 .site-footer {
