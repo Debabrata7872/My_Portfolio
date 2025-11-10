@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -14,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    
+    <link rel="stylesheet" href="styles.css">
 
     <title>Debabrata Sahoo</title>
 </head>
@@ -45,15 +44,15 @@
     <div class="container">
         <!-- Introduction Section -->
         <div id="home" class="row align-items-center pb-5 pt-5">
-            <div class="col-7">
+            <div class="col-7 intro">
                 <br>
-                <h1 class="fst-normal" style="font-size:4rem;"> I'm</h1><h1 class="fw-bolder" style="font-size:4rem;">Debabrata Sahoo</h1>
+                <h1 class="fst-normal me"> I'm</h1><h1 class="fw-bolder name">Debabrata Sahoo</h1>
                 <br>
-                <p class="fw-bold" style="font-size: 2rem;"">
+                <p class="fw-bold typing">
                         A <span class=" typed" style="color: #0a9fe9;"></span>
                 </p>
                 <br>
-                <p class="fs-5">Leveraging recent credentials and a hands-on-keyboard passion for programming, I am
+                <p>Leveraging recent credentials and a hands-on-keyboard passion for programming, I am
                     prepared to
                     deliver robust code and analytical insights to help build and optimize your most
                     challenging projects.</p>
@@ -69,7 +68,7 @@
 
             </div>
             <div class="col-1"></div>
-            <div class="col-4">
+            <div class="pic">
                 <img src="./Images/Profile2.png" class="img-fluid" alt="Profile Picture" width="auto" height="auto">
             </div>
         </div>
@@ -77,8 +76,8 @@
         <!-- About Section -->
 
         <div id="about" class="row align-items-center pt-5 pb-5 mt-5">
-            <div class="col-4">
-                <h2 class="pb-3" style="font-size: 2rem;">Skills</h2>
+            <div class="skills">
+                <h2 class="pb-3 heading">Skills</h2>
                 <p class="mb-0 fs-6 font-roboto fw-bold fst-italic">Java</p>
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
@@ -115,16 +114,15 @@
                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
                 </div>
             </div>
-            <div class="col-2"></div>
-            <div class="col-6">
-                <h2 class="pt-4" style="font-size: 2rem;">About Me</h2>
+            <div class="about-me">
+                <h2 class="pt-4 heading">About Me</h2>
                 <blockquote class="blockquote">
                     <p>Completed MCA and a strong foundation in programming languages. Eager to kick-start my career at
                         your company, where I can leverage my knowledge, problem-solving skills, and passion for
                         technology to contribute to innovative projects.</p>
                 </blockquote>
                 <br>
-                <h2 style="font-size: 2rem;">Frameworks Used</h2>
+                <h2 class="heading">Frameworks Used</h2>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">React</li>
                     <li class="list-group-item">Bootstrap</li>
@@ -167,13 +165,13 @@
         <!-- Projects Section -->
         <br>
         <div id="work" class="row align-items-center pb-5 mb-5">
-            <h2 style="font-size: 2rem;">Projects</h2>
+            <h2 class="projects heading">Projects</h2>
             <br>
             <br>
             <br>
             <br>
             <div class="col">
-                <div class="card" style="width: 20rem;">
+                <div class="card card-custom">
                     <img src="./Images/Weather.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Weather App</h5>
@@ -183,7 +181,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="width: 20rem;">
+                <div class="card card-custom">
                     <img src="./Images/Crypto.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Crypto Tracker</h5>
@@ -195,7 +193,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="width: 20rem;">
+                <div class="card card-custom">
                     <img src="./Images/Gym.png" class="card-img-top" alt="Gym Website">
                     <div class="card-body">
                         <h5 class="card-title">Gym Management System</h5>

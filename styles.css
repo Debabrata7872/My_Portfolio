@@ -13,13 +13,33 @@ h2{
 p{
     font-weight: 450;
     font-family: 'saira', sans-serif;
-    /* font-family: 'Elms Sans', sans-serif; */
-}
+    font-size: 20px;}
 
 li{
     font-family: 'saira', sans-serif;
     font-weight: 500;
     font-size: 18px;
+}
+.me, .name{
+    font-size:4rem;
+}
+.typing{
+    font-size: 2rem;
+}
+.pic{
+  height: 400px;
+  width: 320px;
+}
+.heading{
+  font-size: 2rem;
+}
+.skills{
+  width: 400px;
+  margin-right: 50px;
+}
+.about-me{
+  width: 400px;
+  margin-left: 50px;
 }
 .nav-link{
     font-family: 'saira', sans-serif;
@@ -27,34 +47,25 @@ li{
 }
 
 /* Skill Loop */
-
 .icon-slider {
-  /* Restricts the visible area of the slider */
   overflow: hidden; 
-  width: 100%;
-  /* Optional: Add padding or background as needed */
+  width: auto;
   padding: 20px 0;
 }
 
 .slide-track {
-  /* Puts all icons in a single row */
   display: flex;
-  /* Ensures the items don't wrap to the next line */
   white-space: nowrap;
-  /* Adjust the total width based on the number and size of your icons */
   width: fit-content; 
   
-  /* Animation properties */
   animation: scroll-left 20s linear infinite;
 }
 
 .icon-slider:hover .slide-track {
-  /* Pauses the animation when the user hovers over the slider */
   animation-play-state: paused;
 }
 
 .icon {
-  /* Ensures icons stay in a row and don't shrink */
   flex-shrink: 0;
   width: 80px;
   height: 80px;
@@ -70,7 +81,6 @@ li{
   height: auto;
 }
 
-/* Keyframe animation for the scrolling effect */
 @keyframes scroll-left {
   0% {
     transform: translateX(0);
@@ -89,6 +99,10 @@ li{
     }
   }
 
+/* Card Custom Width */
+  .card-custom{
+    margin-bottom: 30px;
+  }
 /* Footer styles */
 .site-footer {
     background-color: #222;
@@ -148,5 +162,149 @@ li{
     }
     .footer-bottom {
         font-size: 0.9rem;
+    }
+}
+
+@media (max-width:1024px) {
+    .icon {
+        width: 50px;
+        height: 50px;
+        margin: 0 15px;
+    }
+    .me, .name{
+        font-size:2rem;
+    }
+    .typing{
+        font-size: 1.5rem;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .pic{
+      height: 300px;
+      width: 240px;
+    }
+    .heading{
+      font-size: 1.5rem;
+    }
+    .skills{
+      width: 310px;
+      margin-right: 50px;
+    }
+    .about-me{
+      width: 310px;
+      margin-left: 50px;
+    }
+    p{
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width:768px) {
+    .icon {
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+    }
+    .card-custom{
+      width : 530px !important;
+    }
+
+    .icon-slider{
+      width: 530px !important;
+    }
+
+    .intro{
+      width: 750px !important;
+    }
+    .me, .name{
+        font-size:2.2rem;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .typing{
+        font-size: 1.8rem;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .pic{
+      margin-top: 70px;
+      margin-left: 50px;
+      height: 450px;
+      width: 450px;
+    }
+    .heading{
+      font-size: 1.5rem;
+    }
+    .skills{
+      width: 600px;
+      margin-bottom: 60px;
+    }
+    .about-me{
+      text-align: center;
+      width: 600px;
+      margin-left: 0px;
+      margin-right: 50px;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:480px) {
+    .icon {
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+    }
+    .card-custom{
+      width : 380px !important;
+      margin: auto;
+    }
+
+    .icon-slider{
+      width: auto !important;
+      margin: auto;
+    }
+
+    .intro{
+      width: 400px !important;
+      text-align: center;
+      margin: auto;
+    }
+    .me, .name{
+        font-size:2.2rem;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        margin: auto;
+        text-align: center
+    }
+    .typing{
+        font-size: 1.8rem;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        text-align: center;
+    }
+    .pic{
+      margin-top: 70px;
+      margin-left: 0px;
+      height: auto;
+      width: auto;
+    }
+    .heading{
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .skills{
+      width: 600px;
+      margin-bottom: 60px;
+    }
+    .about-me{
+      text-align: center;
+      width: 600px;
+      margin-left: 0px;
+      margin-right: 50px;
+    }
+    p{
+        font-size: 1.5rem;
     }
 }
