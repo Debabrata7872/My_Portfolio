@@ -307,6 +307,23 @@ li{
     p{
         font-size: 1.5rem;
     }
+    .site-footer {
+        padding: 30px 10px 10px;
+    }
+    .footer-inner {
+      font-size: 20px;
+        flex-direction: column;
+        gap: 12px;
+        align-items:center;
+        text-align: center;
+    }
+    .email{
+      font-style: italic;
+      font-size: smaller;
+    }
+    .footer-bottom {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width:320px) {
