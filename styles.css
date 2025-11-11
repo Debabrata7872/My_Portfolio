@@ -308,3 +308,80 @@ li{
         font-size: 1.5rem;
     }
 }
+
+@media (max-width:320px) {
+    .icon {
+        width: 35px;
+        height: 35px;
+        margin: 0 10px;
+    }
+    .card-custom{
+      width : 290px !important;
+      margin: auto;
+    }
+
+    .icon-slider{
+      width: 290px !important;
+      margin: auto;
+    }
+
+    .intro{
+      width: 310px !important;
+      text-align: center;
+      margin: auto;
+    }
+    .me, .name{
+        font-size:3rem;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        margin: auto;
+        text-align: center
+    }
+    .typing{
+        font-size: 2rem;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        text-align: left;
+        margin-left: 20px;
+    }
+    .pic{
+      margin-top: 70px;
+      margin-left: 0px;
+      height: auto;
+      width: auto;
+    }
+    .heading{
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .skills{
+      width: 300px;
+      margin-bottom: 60px;
+    }
+    .about-me{
+      text-align: center;
+      width: 310px;
+      margin-left: 0px;
+      margin-right: 50px;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+    .site-footer {
+        padding: 30px 10px 10px;
+    }
+    .footer-inner {
+      font-size: 20px;
+        flex-direction: column;
+        gap: 12px;
+        align-items:center;
+        text-align: center;
+    }
+    .email{
+      font-style: italic;
+      font-size: smaller;
+    }
+    .footer-bottom {
+        font-size: 0.9rem;
+    }
+}
