@@ -1,242 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script src="script.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <link rel="stylesheet" href="styles.css">
-
-    <title>Debabrata Sahoo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEBABRATA SAHOO // PHP DEVELOPER</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- Navbar -->
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand fw-bold" href="#">Portfolio</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ms-auto">
-                        <a class="nav-link active mx-4" aria-current="page" href="#home">Home</a>
-                        <a class="nav-link mx-4" href="#about">About Me</a>
-                        <a class="nav-link mx-4" href="#work">My Work</a>
-                        <a class="nav-link mx-4" href="#contact">Contact <i class="bi bi-box-arrow-up-right ms-1"></i></a>
-                    </div>
-                </div>
-            </div>
-        </nav>
+
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
+<nav>
+  <div class="nav-logo">DS://PORTFOLIO</div>
+  <div class="nav-links">
+    <a href="#s-about">PROFILE</a>
+    <a href="#s-skills">STACK</a>
+    <a href="#s-projects">PROJECTS</a>
+    <a href="#s-exp">HISTORY</a>
+    <a href="#s-contact">CONTACT</a>
+  </div>
+  <div class="nav-tag">PHP_DEV ●</div>
+</nav>
+
+<div class="scene" id="s-hero" style="max-width:1200px;margin:0 auto;padding:8rem 3rem 5rem;">
+  <div class="bg-text" style="font-size:22vw;top:-5%;right:-5%;opacity:.4;">DS</div>
+
+  <div style="opacity:0;animation:fadeUp .8s .1s forwards;">
+    <div style="font-family:var(--mono);font-size:.68rem;letter-spacing:.22em;color:var(--purple);margin-bottom:1.2rem;">
+      LOADING_PROFILE... <span style="color:var(--orange);">█</span>
     </div>
 
-    <div class="container">
-        <!-- Introduction Section -->
-        <div id="home" class="row align-items-center pb-5 pt-5">
-            <div class="col-7 intro">
-                <br>
-                <h1 class="fst-normal me"> I'm</h1><h1 class="fw-bolder name">Debabrata Sahoo</h1>
-                <br>
-                <p class="fw-bold typing">
-                        A <span class=" typed" style="color: #0a9fe9;"></span>
-                </p>
-                <br>
-                <p>Leveraging recent credentials and a hands-on-keyboard passion for programming, I am
-                    prepared to
-                    deliver robust code and analytical insights to help build and optimize your most
-                    challenging projects.</p>
-                <br>
-                <br>
-                <!-- Social Media Icons -->
-                <a href="https://github.com/Debabrata7872" class="link-dark fs-4 px-3"><i class="bi bi-github"></i></a>
-                <a href="https://www.linkedin.com/in/debabrata-sahoo-b92b23271" class="link-dark fs-4 px-3"><i
-                        class="bi bi-linkedin"></i></a>
-                <a href="#facebook" class="link-dark fs-4 px-3"><i class="bi bi-facebook"></i></a>
-                <a href="#instagram" class="link-dark fs-4 px-3"><i class="bi bi-instagram"></i></a>
+    <h1 class="glitch-title hero-name" data-text="DEBABRATA">
+      DEBABRATA<br><span class="line2">SAHOO.</span>
+    </h1>
 
+    <div class="hero-role">PHP DEVELOPER &amp; SOFTWARE ENGINEER</div>
 
-            </div>
-            <div class="col-1"></div>
-            <div class="pic">
-                <img src="./Images/Profile2.png" class="img-fluid" alt="Profile Picture" width="auto" height="auto">
-            </div>
-        </div>
+    <p class="hero-bio">
+      I build <strong>secure, scalable web systems</strong> at Softech ERP Solutions, Kolkata. I bridge heavy backend logic and engaging frontend design. My obsession: <strong>minimalist architecture</strong> — strip the noise, ship fast, make it just work.
+    </p>
 
-        <!-- About Section -->
-
-        <div id="about" class="row align-items-center pt-5 pb-5 mt-5">
-            <div class="skills">
-                <h2 class="pb-3 heading">Skills</h2>
-                <p class="mb-0 fs-6 font-roboto fw-bold fst-italic">Java</p>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                        aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
-                </div>
-                <br>
-                <p class="mb-0 fs-6 font-roboto fw-bold fst-italic">Python</p>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
-                </div>
-                <br>
-                <p class="mb-0 fs-6 font-roboto fw-bold fst-italic">C</p>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
-                </div>
-                <br>
-                <p class="mb-0 fs-6 font-roboto fw-bold fst-italic">SQL</p>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                        aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
-                </div>
-                <br>
-                <p class="mb-0 fs-6 font-roboto fw-bold fst-italic">HTML/CSS</p>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
-                </div>
-                <br>
-                <p class="mb-0 fs-6 font-roboto fw-bold fst-italic">JavaScript</p>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
-                </div>
-            </div>
-            <div class="about-me">
-                <h2 class="pt-4 heading">About Me</h2>
-                <blockquote class="blockquote">
-                    <p>Completed MCA and a strong foundation in programming languages. Eager to kick-start my career at
-                        your company, where I can leverage my knowledge, problem-solving skills, and passion for
-                        technology to contribute to innovative projects.</p>
-                </blockquote>
-                <br>
-                <h2 class="heading">Frameworks Used</h2>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">React</li>
-                    <li class="list-group-item">Bootstrap</li>
-                    <li class="list-group-item">Node.js</li>
-                    <li class="list-group-item">Express.js</li>
-                    <li class="list-group-item"></li>
-                </ul>
-            </div>
-        </div>
-        <br>
-        <br>
-
-        <div class="icon-slider">
-            <div class="slide-track">
-                <!-- Add your icons/images here. Duplicate them to create a seamless loop. -->
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" /></div>
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" /></div>
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" /></div>
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" /></div>
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" /></div>
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" /></div>
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" /></div>
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" /></div>
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" /></div>
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" /></div>
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" /></div>
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" /></div>
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg" /></div>
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original-wordmark.svg" /></div>
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" /></div>
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/web3js/web3js-original.svg" /></div>
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" /></div>
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original-wordmark.svg" /></div>
-                <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" /></div>
-                <!-- Duplicate set -->
-            </div>
-        </div>
-
-
-        <!-- Projects Section -->
-        <br>
-        <div id="work" class="row align-items-center pb-5 mb-5">
-            <h2 class="projects heading">Projects</h2>
-            <br>
-            <br>
-            <br>
-            <br>
-            <div class="col">
-                <div class="card card-custom">
-                    <img src="./Images/Weather.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Weather App</h5>
-                        <p class="card-text">A simple weather application that provides weather updates.</p>
-                        <a href="https://weatherapp-blush-sigma.vercel.app/" class="btn btn-primary">Go to Website <i class="bi bi-box-arrow-up-right ms-1"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-custom">
-                    <img src="./Images/Crypto.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Crypto Tracker</h5>
-                        <p class="card-text">A cryptocurrency tracking application that provides real-time price
-                            updates.</p>
-                        <a href="https://crypto-currency-tracker-zeta-ten.vercel.app/" class="btn btn-primary">Go to
-                            Website <i class="bi bi-box-arrow-up-right ms-1"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-custom">
-                    <img src="./Images/Gym.png" class="card-img-top" alt="Gym Website">
-                    <div class="card-body">
-                        <h5 class="card-title">Gym Management System</h5>
-                        <p class="card-text">This system that allows users to manage their workouts.
-                        </p>
-                        <a href="#" class="btn btn-primary">Go to code <i class="bi bi-box-arrow-up-right ms-1"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="cta-row">
+      <a href="#s-projects" class="btn-cyber btn-p"><span>⚡ VIEW PROJECTS</span></a>
+      <a href="#s-contact" class="btn-cyber btn-o"><span>// INITIATE_CONTACT</span></a>
+      <a href="https://github.com/Debabrata7872" target="_blank" class="btn-cyber btn-p" style="border-color:rgba(176,38,255,0.4);"><span>⬡ GITHUB</span></a>
     </div>
-    <footer id="contact" class="site-footer pt-5 mt-5" role="contentinfo">
-        <div class="footer-inner">
-            <div class="footer-col footer-about">
-                <h3>My Portfolio</h3>
-                <p>Designer &amp; developer building thoughtful web experiences.</p>
-                <p class="email"><i class="bi bi-at"></i>Email: <a href="mailto:debabratasahoo499905@gmail.com">debabratasahoo499905@gmail.com</a></p>
-            </div>
-            <div class="footer-col footer-links">
-                <h4>Quick links</h4>
-                <ul>
-                    <li><a href="#about"><i class="bi bi-file-earmark-person-fill"></i>&nbsp;About Me</a></li>
-                    <li><a href="#work">My Work</a></li>
-                    <li><a href="https://linktr.ee/debabrata_">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-col footer-social">
-                <h4>Follow</h4>
-                <ul class="social-list">
-                    <li><a href="https://github.com/Debabrata7872" target="_blank" rel="noopener noreferrer"><i
-                                class="bi bi-github ms-1"></i> GitHub</a>
-                    </li>
-                    <li><a href="https://www.linkedin.com/in/debabrata-sahoo-b92b23271" target="_blank"
-                            rel="noopener noreferrer"><i class="bi bi-linkedin ms-1"></i> LinkedIn</a></li>
-                    
-                </ul>
-            </div>
+  </div>
+
+  <div style="display:flex;gap:2rem;margin-top:4rem;flex-wrap:wrap;opacity:0;animation:fadeUp .8s .6s forwards;">
+    <div style="font-family:var(--mono);font-size:.65rem;color:var(--muted);letter-spacing:.1em;">
+      <span style="color:var(--orange);font-family:var(--orbitron);font-size:1.5rem;font-weight:900;display:block;">6+</span>INTERNSHIPS
+    </div>
+    <div style="font-family:var(--mono);font-size:.65rem;color:var(--muted);letter-spacing:.1em;">
+      <span style="color:var(--orange);font-family:var(--orbitron);font-size:1.5rem;font-weight:900;display:block;">7+</span>PROJECTS
+    </div>
+    <div style="font-family:var(--mono);font-size:.65rem;color:var(--muted);letter-spacing:.1em;">
+      <span style="color:var(--orange);font-family:var(--orbitron);font-size:1.5rem;font-weight:900;display:block;">10+</span>TECHNOLOGIES
+    </div>
+    <div style="font-family:var(--mono);font-size:.65rem;color:var(--muted);letter-spacing:.1em;">
+      <span style="color:var(--orange);font-family:var(--orbitron);font-size:1.5rem;font-weight:900;display:block;">MCA</span>GRADUATE
+    </div>
+  </div>
+</div>
+
+<div class="scene-divider"></div>
+
+<div class="scene" id="s-about" style="max-width:1200px;margin:0 auto;padding:6rem 3rem;">
+  <div class="scene-label reveal">profile.exe</div>
+  <h2 class="scene-title reveal">WHO IS <span class="pu">DEBABRATA</span><br><span class="or">SAHOO?</span></h2>
+
+  <div class="about-grid">
+    <div class="reveal-l">
+      <div class="about-visual">
+        <div class="hex-frame">
+          <div class="hex-ring"></div>
+          <div class="hex-initials">DS</div>
         </div>
-        <div class="footer-bottom">
-            <small>&copy; 2025 My Portfolio — Built & Designed with ❤️ by Dev <span class="visually-hidden">All rights
-                    reserved.</span></small>
+      </div>
+      <div class="about-stats">
+        <div class="stat-box reveal">
+          <div class="stat-num">6+</div>
+          <div class="stat-label">INTERNSHIPS</div>
         </div>
-    </footer>
+        <div class="stat-box reveal">
+          <div class="stat-num">7+</div>
+          <div class="stat-label">PROJECTS BUILT</div>
+        </div>
+        <div class="stat-box reveal">
+          <div class="stat-num">MCA</div>
+          <div class="stat-label">GIFT BHUBANESWAR</div>
+        </div>
+        <div class="stat-box reveal">
+          <div class="stat-num">KOL</div>
+          <div class="stat-label">KOLKATA, INDIA 🇮🇳</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal-r">
+      <p style="font-size:1.05rem;line-height:1.85;color:var(--muted);margin-bottom:1.5rem;">
+        A <span style="color:var(--text);font-weight:600;">Software Engineer</span> based in Kolkata, India — currently building secure and scalable web applications as a PHP Developer at <span style="color:var(--orange);">Softech ERP Solutions</span>. I bridge the gap between heavy backend logic and engaging frontend design.
+      </p>
+      <p style="font-size:1.05rem;line-height:1.85;color:var(--muted);margin-bottom:2rem;">
+        My true passion is <span style="color:var(--purple);">minimalist architecture</span> — stripping away the clutter to build fast, user-centric experiences and practical tools that just make sense. Oh, and I bring a good sense of humor to every team I work with!
+      </p>
+
+      <ul class="info-list">
+        <li><span class="key">ROLE</span><span class="val">PHP Developer</span></li>
+        <li><span class="key">COMPANY</span><span class="val">Softech ERP Solutions Pvt. Ltd.</span></li>
+        <li><span class="key">LOCATION</span><span class="val">Kolkata, West Bengal 🇮🇳</span></li>
+        <li><span class="key">DEGREE</span><span class="val">MCA — GIFT Bhubaneswar</span></li>
+        <li><span class="key">PREV B.SC.</span><span class="val">Electronics — Barrackpore Rastraguru</span></li>
+        <li><span class="key">STATUS</span><span class="val" style="color:var(--orange);">● AVAILABLE FOR HIRE</span></li>
+        <li><span class="key">EMAIL</span><span class="val" style="font-size:.82rem;"><a href="mailto:debabratasahoo499905@gmail.com" style="color:var(--orange);text-decoration:none;">debabratasahoo499905@gmail.com</a></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="scene-divider"></div>
+
+<div class="scene" id="s-skills" style="max-width:1200px;margin:0 auto;padding:6rem 3rem;">
+  <div class="scene-label reveal">skills.db</div>
+  <h2 class="scene-title reveal">TECH <span class="or">ARSENAL</span></h2>
+
+  <div class="skill-grid">
+    <div class="skill-cat reveal">
+      <div class="skill-cat-title">LANGUAGES</div>
+      <div class="skill-tags">
+        <span class="sk">PHP</span><span class="sk">JavaScript</span><span class="sk">Python</span>
+        <span class="sk">Java</span><span class="sk">C++</span><span class="sk">C</span>
+        <span class="sk">HTML5</span><span class="sk">CSS3</span>
+      </div>
+    </div>
+    <div class="skill-cat reveal">
+      <div class="skill-cat-title">FRAMEWORKS</div>
+      <div class="skill-tags">
+        <span class="sk">React.js</span><span class="sk">Node.js</span><span class="sk">Tailwind</span>
+        <span class="sk">Bootstrap</span><span class="sk">jQuery</span><span class="sk">Vite</span>
+        <span class="sk">Flutter</span><span class="sk">Web3.js</span><span class="sk">MERN</span>
+      </div>
+    </div>
+    <div class="skill-cat reveal">
+      <div class="skill-cat-title">DATABASES</div>
+      <div class="skill-tags">
+        <span class="sk">MySQL</span><span class="sk">PostgreSQL</span>
+        <span class="sk">MSSQL</span><span class="sk">Oracle DB</span>
+        <span class="sk">JSON</span><span class="sk">phpMyAdmin</span>
+      </div>
+    </div>
+    <div class="skill-cat reveal">
+      <div class="skill-cat-title">TOOLS</div>
+      <div class="skill-tags">
+        <span class="sk">VS Code</span><span class="sk">Git/GitHub</span>
+        <span class="sk">XAMPP</span><span class="sk">Vercel</span>
+        <span class="sk">Hostinger</span><span class="sk">InfinityFree</span>
+      </div>
+    </div>
+    <div class="skill-cat reveal">
+      <div class="skill-cat-title">PLATFORMS</div>
+      <div class="skill-tags">
+        <span class="sk">Arduino</span><span class="sk">MATLAB</span>
+        <span class="sk">Eclipse IDE</span><span class="sk">ESP32</span>
+        <span class="sk">JSP / JDBC</span>
+      </div>
+    </div>
+    <div class="skill-cat reveal">
+      <div class="skill-cat-title">CODING PROFILES</div>
+      <div class="skill-tags" style="flex-direction:column;gap:.7rem;">
+        <a href="https://www.hackerrank.com/profile/debabratasahoo41" target="_blank"
+           style="font-family:var(--mono);font-size:.68rem;color:var(--orange);text-decoration:none;display:flex;align-items:center;gap:.5rem;transition:all .2s;"
+           onmouseover="this.style.textShadow='0 0 10px var(--orange-glow)'" onmouseout="this.style.textShadow='none'">
+          ✦ HackerRank → debabratasahoo41
+        </a>
+        <a href="https://leetcode.com/u/mrko5uihde/" target="_blank"
+           style="font-family:var(--mono);font-size:.68rem;color:var(--purple);text-decoration:none;display:flex;align-items:center;gap:.5rem;"
+           onmouseover="this.style.textShadow='0 0 10px var(--purple-glow)'" onmouseout="this.style.textShadow='none'">
+          ⌬ LeetCode → mrko5uihde
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="scene-divider"></div>
+
+<div class="scene" id="s-projects" style="max-width:1200px;margin:0 auto;padding:6rem 3rem;">
+  <div class="scene-label reveal">projects.log</div>
+  <h2 class="scene-title reveal">MISSION <span class="pu">LOGS</span></h2>
+
+  <div class="proj-cinema">
+    <div class="proj-item reveal">
+      <div class="proj-visual">🎵</div>
+      <div class="proj-info">
+        <div class="proj-num">// MISSION_01</div>
+        <div class="proj-title">DEVBEATS</div>
+        <p class="proj-desc">Fully dynamic music streaming web app with Role-Based Access Control. Custom JS audio engine with seek/volume/autoplay, admin CRUD dashboard, secure auth with password hashing, avatar uploads, and SweetAlert2 guest prompts.</p>
+        <div class="proj-stack"><span class="ps">PHP</span><span class="ps">MySQL</span><span class="ps">JavaScript</span><span class="ps">Bootstrap</span><span class="ps">RBAC</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/Debabrata7872/DevBeats" target="_blank" class="pl pl-gh">⬡ GITHUB →</a>
+          <a href="http://devbeats.ct.ws" target="_blank" class="pl pl-live">⚡ LIVE DEMO →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-item reveal">
+      <div class="proj-visual">₿</div>
+      <div class="proj-info">
+        <div class="proj-num">// MISSION_02</div>
+        <div class="proj-title">CRYPTO TRACKER</div>
+        <p class="proj-desc">Real-time cryptocurrency tracker powered by the CoinGecko API. Shows live coin prices, market caps, and 24h changes with a clean, responsive React interface.</p>
+        <div class="proj-stack"><span class="ps">React.js</span><span class="ps">CoinGecko API</span><span class="ps">CSS3</span><span class="ps">Vercel</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/Debabrata7872/Crypto_Currency_Tracker" target="_blank" class="pl pl-gh">⬡ GITHUB →</a>
+          <a href="https://crypto-currency-tracker-zeta-ten.vercel.app/" target="_blank" class="pl pl-live">⚡ LIVE DEMO →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-item reveal">
+      <div class="proj-visual">🌤</div>
+      <div class="proj-info">
+        <div class="proj-num">// MISSION_03</div>
+        <div class="proj-title">WEATHER APP</div>
+        <p class="proj-desc">Real-time weather forecasting using OpenWeather API. Enter any city and get live temperature, humidity, wind speed, and conditions. Built in React.js, deployed on Vercel.</p>
+        <div class="proj-stack"><span class="ps">React.js</span><span class="ps">OpenWeather API</span><span class="ps">Node.js</span><span class="ps">Vercel</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/Debabrata7872/Blockchain/tree/main/Weather-App" target="_blank" class="pl pl-gh">⬡ GITHUB →</a>
+          <a href="https://weatherapp-blush-sigma.vercel.app/" target="_blank" class="pl pl-live">⚡ LIVE DEMO →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-item reveal">
+      <div class="proj-visual">🛒</div>
+      <div class="proj-info">
+        <div class="proj-num">// MISSION_04</div>
+        <div class="proj-title">POS + STOCK SYSTEM</div>
+        <p class="proj-desc">Enterprise-grade Point of Sales with inventory management and party accounting — built for retail businesses to optimize stock, streamline transactions, and achieve financial transparency.</p>
+        <div class="proj-stack"><span class="ps">Java</span><span class="ps">JSP</span><span class="ps">JDBC</span><span class="ps">Oracle DB</span><span class="ps">MySQL</span></div>
+        <div class="proj-links"><a href="#" class="pl pl-gh">⬡ GITHUB →</a></div>
+      </div>
+    </div>
+
+    <div class="proj-item reveal">
+      <div class="proj-visual">🌈</div>
+      <div class="proj-info">
+        <div class="proj-num">// MISSION_05</div>
+        <div class="proj-title">COLOR DETECTOR — ESP32</div>
+        <p class="proj-desc">Hardware + software IoT project. An ESP32 microcontroller reads RGB values from a color sensor, processes them to identify the color, and displays results on an LCD screen via wireless communication.</p>
+        <div class="proj-stack"><span class="ps">ESP32</span><span class="ps">IoT</span><span class="ps">Color Sensor</span><span class="ps">LCD</span><span class="ps">Hardware</span></div>
+        <div class="proj-links"><a href="#" class="pl pl-gh">⬡ HARDWARE PROJECT →</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="scene-divider"></div>
+
+<div class="scene" id="s-exp" style="max-width:1200px;margin:0 auto;padding:6rem 3rem;">
+  <div class="scene-label reveal">experience.log</div>
+  <h2 class="scene-title reveal">MISSION <span class="or">HISTORY</span></h2>
+
+  <div class="exp-cinema reveal">
+    <div class="exp-card active">
+      <div class="exp-header">
+        <div class="exp-role">PHP DEVELOPER — FULL TIME</div>
+        <span class="exp-badge">● ACTIVE</span>
+      </div>
+      <div class="exp-co">Softech ERP Solutions Pvt. Ltd. · Kolkata</div>
+      <div class="exp-date">FEB 2026 — PRESENT · 2 MOS</div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header"><div class="exp-role">PHP DEVELOPER INTERN</div></div>
+      <div class="exp-co">Softech ERP Solutions Pvt. Ltd. · Kolkata</div>
+      <div class="exp-date">SEP 2025 — FEB 2026 · 6 MOS</div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header"><div class="exp-role">REACT WEBAPP DEVELOPER INTERN</div></div>
+      <div class="exp-co">Earthnow</div>
+      <div class="exp-date">MAR 2025 — APR 2025 · 2 MOS</div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header"><div class="exp-role">BLOCKCHAIN INTERN</div></div>
+      <div class="exp-co">Intense Technologies Limited</div>
+      <div class="exp-date">JAN 2025 — MAR 2025 · 3 MOS</div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header"><div class="exp-role">SOFTWARE DEVELOPMENT ENGINEER INTERN</div></div>
+      <div class="exp-co">ITJOBXS</div>
+      <div class="exp-date">JAN 2024 — SEP 2024 · 9 MOS</div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header"><div class="exp-role">JAVA FULL STACK DEVELOPER INTERN</div></div>
+      <div class="exp-co">IIG Varsity</div>
+      <div class="exp-date">JUN 2024 — AUG 2024 · 3 MOS</div>
+    </div>
+  </div>
+</div>
+
+<div class="scene-divider"></div>
+
+<div class="scene" id="s-edu" style="max-width:1200px;margin:0 auto;padding:6rem 3rem;">
+  <div class="scene-label reveal">education.sys</div>
+  <h2 class="scene-title reveal">SYSTEM <span class="pu">TRAINING</span></h2>
+
+  <div class="edu-grid">
+    <div class="edu-card reveal">
+      <div class="edu-icon">🎓</div>
+      <div class="edu-yr">// 2023 — 2025</div>
+      <div class="edu-deg">MASTER OF COMPUTER APPLICATIONS</div>
+      <div class="edu-col">Gandhi Institute for Technology (GIFT), Bhubaneswar</div>
+    </div>
+    <div class="edu-card reveal">
+      <div class="edu-icon">⚗️</div>
+      <div class="edu-yr">// 2020 — 2023</div>
+      <div class="edu-deg">B.SC. ELECTRONICS</div>
+      <div class="edu-col">Barrackpore Rastraguru Surendranath College</div>
+    </div>
+    <div class="edu-card reveal">
+      <div class="edu-icon">📘</div>
+      <div class="edu-yr">// 2017 — 2019</div>
+      <div class="edu-deg">INTERMEDIATE (+2 SCIENCE)</div>
+      <div class="edu-col">Saraswati Shishu Vidya Mandir +2 Science College</div>
+    </div>
+    <div class="edu-card reveal">
+      <div class="edu-icon">📗</div>
+      <div class="edu-yr">// 2017</div>
+      <div class="edu-deg">MATRICULATION</div>
+      <div class="edu-col">Titagarh Upendra Bhanja Vidyapith</div>
+    </div>
+  </div>
+</div>
+
+<div class="scene-divider"></div>
+
+<div class="scene" id="s-social" style="max-width:1200px;margin:0 auto;padding:4rem 3rem;">
+  <div class="scene-label reveal">network.conf</div>
+  <h2 class="scene-title reveal" style="margin-bottom:2rem;">FIND ME <span class="or">ONLINE</span></h2>
+  <div class="social-strip reveal">
+    <a href="https://github.com/Debabrata7872" target="_blank" class="soc-card">
+      <span class="soc-ico">⬡</span><div><span class="soc-name">GITHUB</span><span class="soc-handle">Debabrata7872</span></div>
+    </a>
+    <a href="https://linkedin.com/in/debabrata-sahoo-b92b23271" target="_blank" class="soc-card">
+      <span class="soc-ico" style="font-weight:900;font-size:1.1rem;">in</span><div><span class="soc-name">LINKEDIN</span><span class="soc-handle">debabrata-sahoo</span></div>
+    </a>
+    <a href="https://www.hackerrank.com/profile/debabratasahoo41" target="_blank" class="soc-card">
+      <span class="soc-ico">✦</span><div><span class="soc-name">HACKERRANK</span><span class="soc-handle">debabratasahoo41</span></div>
+    </a>
+    <a href="https://leetcode.com/u/mrko5uihde/" target="_blank" class="soc-card">
+      <span class="soc-ico">⌬</span><div><span class="soc-name">LEETCODE</span><span class="soc-handle">mrko5uihde</span></div>
+    </a>
+    <a href="https://instagram.com/debabrata__7872/" target="_blank" class="soc-card">
+      <span class="soc-ico">◈</span><div><span class="soc-name">INSTAGRAM</span><span class="soc-handle">debabrata__7872</span></div>
+    </a>
+    <a href="https://twitter.com" target="_blank" class="soc-card">
+      <span class="soc-ico">𝕏</span><div><span class="soc-name">TWITTER / X</span><span class="soc-handle">@debabrata</span></div>
+    </a>
+    <a href="mailto:debabratasahoo499905@gmail.com" class="soc-card">
+      <span class="soc-ico">✉</span><div><span class="soc-name">EMAIL</span><span class="soc-handle">Gmail</span></div>
+    </a>
+  </div>
+</div>
+
+<div class="scene-divider"></div>
+
+<div class="scene" id="s-contact" style="max-width:1200px;margin:0 auto;padding:6rem 3rem 4rem;min-height:auto;">
+  <div class="scene-label reveal" style="justify-content:center;">contact.init()</div>
+  <div class="contact-giant reveal">CONNECT</div>
+  <p class="contact-sub reveal">OPEN TO FULL-TIME ROLES · FREELANCE · COLLABORATIONS</p>
+  <div style="text-align:center;" class="reveal">
+    <a href="mailto:debabratasahoo499905@gmail.com" class="contact-email">debabratasahoo499905@gmail.com</a>
+  </div>
+
+  <div class="cform reveal">
+    <div class="cf-row">
+      <div><label class="cf-label">// YOUR_NAME</label><input class="cf-input" type="text" placeholder="John Doe" id="cf-name"></div>
+      <div><label class="cf-label">// YOUR_EMAIL</label><input class="cf-input" type="email" placeholder="john@example.com" id="cf-email"></div>
+    </div>
+    <div><label class="cf-label">// MESSAGE</label><textarea class="cf-textarea" placeholder="Hey Debabrata, let's build something..." id="cf-msg"></textarea></div>
+    <button class="cf-btn" onclick="sendMsg()">⚡ TRANSMIT_MESSAGE</button>
+    <div id="cf-ok" style="display:none;font-family:var(--mono);font-size:.72rem;color:var(--orange);text-align:center;margin-top:.5rem;">✓ TRANSMISSION SUCCESSFUL — I'LL RESPOND SHORTLY.</div>
+  </div>
+</div>
+
+<footer>
+  <span>© 2026 <b>DEBABRATA SAHOO</b></span>
+  <span style="font-size:.58rem;letter-spacing:.15em;color:rgba(176,38,255,0.3);">DS://PORTFOLIO_V3.0</span>
+  <span>BUILT WITH <span>⚡</span> IN KOLKATA</span>
+</footer>
+
+<script src="script.js"></script>
 </body>
-
 </html>
