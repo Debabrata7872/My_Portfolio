@@ -596,3 +596,170 @@ footer span span { color: var(--orange); }
 }
 
 @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:none; } }
+
+/* ══════════════════════════════════════════
+   PRELOADER
+══════════════════════════════════════════ */
+#preloader {
+  position: fixed; inset: 0; z-index: 99999;
+  background: #05030a;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  transition: opacity .7s ease, visibility .7s ease;
+  overflow: hidden;
+}
+#preloader.hide { opacity: 0; visibility: hidden; pointer-events: none; }
+
+/* grid bg */
+#preloader::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(176,38,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(176,38,255,0.06) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(ellipse at center, black 0%, transparent 72%);
+  pointer-events: none;
+}
+
+/* scanline sweep */
+#preloader::after {
+  content: '';
+  position: absolute; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(176,38,255,0.5), rgba(255,106,0,0.5), transparent);
+  animation: pl-scan 2s linear infinite;
+  pointer-events: none;
+}
+@keyframes pl-scan { 0%{ top:-2px } 100%{ top:100% } }
+
+/* ── DS glyph ── */
+.pl-logo {
+  position: relative;
+  width: 140px; height: 140px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+/* outer spinning hex border */
+.pl-hex {
+  position: absolute; inset: 0;
+  animation: pl-spin 6s linear infinite;
+}
+.pl-hex svg { width: 100%; height: 100%; }
+@keyframes pl-spin { to { transform: rotate(360deg); } }
+
+/* inner counter-spin ring */
+.pl-ring-inner {
+  position: absolute;
+  inset: 12px;
+  border: 1px dashed rgba(255,106,0,0.4);
+  border-radius: 50%;
+  animation: pl-spin-r 4s linear infinite;
+}
+@keyframes pl-spin-r { to { transform: rotate(-360deg); } }
+
+/* DS text */
+.pl-ds {
+  position: relative; z-index: 2;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.8rem; font-weight: 900;
+  letter-spacing: -.04em;
+  background: linear-gradient(135deg, #b026ff, #ff6a00);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  animation: pl-glitch 3s infinite, pl-glow 2s ease-in-out infinite alternate;
+  text-shadow: none;
+  filter: drop-shadow(0 0 12px rgba(176,38,255,0.7));
+}
+@keyframes pl-glow {
+  from { filter: drop-shadow(0 0 8px rgba(176,38,255,0.6)); }
+  to   { filter: drop-shadow(0 0 20px rgba(255,106,0,0.8)); }
+}
+@keyframes pl-glitch {
+  0%,88%,100% { transform: translate(0); }
+  90% { transform: translate(-3px, 1px); }
+  92% { transform: translate(3px, -1px); filter: drop-shadow(0 0 8px rgba(255,106,0,1)); }
+  94% { transform: translate(0); }
+}
+
+/* corner accent dots on logo */
+.pl-dot {
+  position: absolute; width: 6px; height: 6px; border-radius: 50%;
+}
+.pl-dot-1 { top: 4px;  left: 50%; transform: translateX(-50%); background: #b026ff; box-shadow: 0 0 8px #b026ff; animation: pl-dot-pulse 1.4s ease-in-out infinite; }
+.pl-dot-2 { bottom: 4px; left: 50%; transform: translateX(-50%); background: #ff6a00; box-shadow: 0 0 8px #ff6a00; animation: pl-dot-pulse 1.4s ease-in-out infinite .7s; }
+.pl-dot-3 { left: 4px; top: 50%; transform: translateY(-50%); background: #00e5ff; box-shadow: 0 0 8px #00e5ff; animation: pl-dot-pulse 1.4s ease-in-out infinite .35s; }
+.pl-dot-4 { right: 4px; top: 50%; transform: translateY(-50%); background: #b026ff; box-shadow: 0 0 8px #b026ff; animation: pl-dot-pulse 1.4s ease-in-out infinite 1.05s; }
+@keyframes pl-dot-pulse { 0%,100%{opacity:1;transform:translateX(-50%) scale(1)} 50%{opacity:.2;transform:translateX(-50%) scale(.5)} }
+.pl-dot-3,.pl-dot-4 { animation-name: pl-dot-pulse-y; }
+@keyframes pl-dot-pulse-y { 0%,100%{opacity:1;transform:translateY(-50%) scale(1)} 50%{opacity:.2;transform:translateY(-50%) scale(.5)} }
+
+/* ── terminal boot log ── */
+.pl-terminal {
+  width: 340px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .68rem;
+  letter-spacing: .08em;
+  color: rgba(176,38,255,0.7);
+  margin-bottom: 2rem;
+  min-height: 100px;
+  text-align: left;
+  line-height: 1.9;
+}
+.pl-terminal .pl-line { opacity: 0; animation: pl-fadein .15s forwards; }
+.pl-terminal .pl-ok  { color: #ff6a00; }
+.pl-terminal .pl-hi  { color: #00e5ff; }
+@keyframes pl-fadein { to { opacity: 1; } }
+
+/* ── progress bar ── */
+.pl-bar-wrap {
+  width: 340px;
+  position: relative;
+}
+.pl-bar-label {
+  display: flex; justify-content: space-between;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .6rem; letter-spacing: .14em;
+  color: rgba(176,38,255,0.5);
+  margin-bottom: .5rem;
+}
+.pl-bar-track {
+  width: 100%; height: 3px;
+  background: rgba(176,38,255,0.1);
+  border: 1px solid rgba(176,38,255,0.2);
+  position: relative; overflow: hidden;
+}
+.pl-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #b026ff, #ff6a00);
+  width: 0%;
+  transition: width .25s ease;
+  position: relative;
+  box-shadow: 0 0 10px rgba(255,106,0,0.6);
+}
+.pl-bar-fill::after {
+  content: '';
+  position: absolute; right: 0; top: 0; bottom: 0;
+  width: 20px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5));
+  animation: pl-shimmer .6s linear infinite;
+}
+@keyframes pl-shimmer { 0%{opacity:0} 50%{opacity:1} 100%{opacity:0} }
+
+.pl-pct {
+  font-family: 'Orbitron', sans-serif;
+  font-size: .65rem; font-weight: 700;
+  color: #ff6a00;
+  text-align: right;
+  margin-top: .4rem;
+  letter-spacing: .1em;
+}
+
+/* side decorative lines */
+.pl-side-line {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  width: 80px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(176,38,255,0.4));
+}
+.pl-side-line.left { left: 5%; background: linear-gradient(90deg, transparent, rgba(176,38,255,0.4)); }
+.pl-side-line.right { right: 5%; background: linear-gradient(90deg, rgba(255,106,0,0.4), transparent); }

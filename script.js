@@ -1,3 +1,45 @@
+// ── PRELOADER ──
+(function(){
+  const terminal = document.getElementById('pl-terminal');
+  const fill     = document.getElementById('pl-fill');
+  const pctLabel = document.getElementById('pl-pct-label');
+  const pctText  = document.getElementById('pl-pct');
+  const loader   = document.getElementById('preloader');
+
+  const lines = [
+    { text: '>> INITIALIZING_KERNEL...',          ok: false, delay: 0   },
+    { text: '>> LOADING_ASSETS          [OK]',    ok: true,  delay: 320 },
+    { text: '>> MOUNTING_FILESYSTEM...',           ok: false, delay: 600 },
+    { text: '>> AUTH_MODULE             [OK]',    ok: true,  delay: 900 },
+    { text: '>> COMPILING_STYLESHEETS...',         ok: false, delay: 1150},
+    { text: '>> UI_ENGINE               [OK]',    ok: true,  delay: 1420},
+    { text: '>> LINKING_PORTFOLIO_DATA...',        ok: false, delay: 1650},
+    { text: '>> DEBABRATA_SAHOO.exe     [READY]', ok: true,  delay: 1950},
+  ];
+
+  const pctSteps = [0,12,28,44,58,72,88,100];
+
+  lines.forEach((l, i) => {
+    setTimeout(() => {
+      const span = document.createElement('div');
+      span.className = 'pl-line' + (l.ok ? ' pl-ok' : '');
+      span.textContent = l.text;
+      terminal.appendChild(span);
+      terminal.scrollTop = terminal.scrollHeight;
+      const p = pctSteps[i];
+      fill.style.width = p + '%';
+      pctLabel.textContent = p + '%';
+      pctText.textContent  = p < 100 ? 'LOADING... ' + p + '%' : 'SYSTEM_READY ●';
+    }, l.delay);
+  });
+
+  // hide after boot sequence finishes
+  setTimeout(() => {
+    loader.classList.add('hide');
+    setTimeout(() => { loader.style.display = 'none'; }, 750);
+  }, 2600);
+})();
+
 // Cursor
 const cur = document.getElementById('cur'), ring = document.getElementById('cur-ring');
 let mx=0, my=0, rx=0, ry=0;

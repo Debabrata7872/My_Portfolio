@@ -4,10 +4,73 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DEBABRATA SAHOO // PHP DEVELOPER</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- ════════════ PRELOADER ════════════ -->
+  <div id="preloader">
+
+    <!-- Side decorative lines -->
+    <div class="pl-side-line left"></div>
+    <div class="pl-side-line right"></div>
+
+    <!-- Logo -->
+    <div class="pl-logo">
+      <!-- Spinning hex outline -->
+      <div class="pl-hex">
+        <svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="hex-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#b026ff"/>
+              <stop offset="100%" stop-color="#ff6a00"/>
+            </linearGradient>
+          </defs>
+          <polygon points="70,6 128,38 128,102 70,134 12,102 12,38"
+            stroke="url(#hex-grad)" stroke-width="1.5" opacity="0.85"/>
+          <!-- vertex dots -->
+          <circle cx="70"  cy="6"   r="3" fill="#b026ff" opacity="0.9"/>
+          <circle cx="128" cy="38"  r="3" fill="#b026ff" opacity="0.9"/>
+          <circle cx="128" cy="102" r="3" fill="#ff6a00" opacity="0.9"/>
+          <circle cx="70"  cy="134" r="3" fill="#ff6a00" opacity="0.9"/>
+          <circle cx="12"  cy="102" r="3" fill="#b026ff" opacity="0.9"/>
+          <circle cx="12"  cy="38"  r="3" fill="#b026ff" opacity="0.9"/>
+          <!-- tick marks -->
+          <line x1="60" y1="6"  x2="70" y2="6"  stroke="#ff6a00" stroke-width="2"/>
+          <line x1="70" y1="6"  x2="80" y2="6"  stroke="#ff6a00" stroke-width="2"/>
+          <line x1="60" y1="134" x2="70" y2="134" stroke="#b026ff" stroke-width="2"/>
+          <line x1="70" y1="134" x2="80" y2="134" stroke="#b026ff" stroke-width="2"/>
+        </svg>
+      </div>
+      <!-- Counter-spin inner ring -->
+      <div class="pl-ring-inner"></div>
+      <!-- Corner pulse dots -->
+      <div class="pl-dot pl-dot-1"></div>
+      <div class="pl-dot pl-dot-2"></div>
+      <div class="pl-dot pl-dot-3"></div>
+      <div class="pl-dot pl-dot-4"></div>
+      <!-- DS text -->
+      <div class="pl-ds">DS</div>
+    </div>
+
+    <!-- Terminal boot log -->
+    <div class="pl-terminal" id="pl-terminal"></div>
+
+    <!-- Progress bar -->
+    <div class="pl-bar-wrap">
+      <div class="pl-bar-label">
+        <span>// BOOTING_SYSTEM</span>
+        <span id="pl-pct-label">0%</span>
+      </div>
+      <div class="pl-bar-track">
+        <div class="pl-bar-fill" id="pl-fill"></div>
+      </div>
+      <div class="pl-pct" id="pl-pct">INITIALIZING...</div>
+    </div>
+
+  </div>
+  <!-- ════════════ /PRELOADER ════════════ -->
 
 <div id="cur"></div>
 <div id="cur-ring"></div>
