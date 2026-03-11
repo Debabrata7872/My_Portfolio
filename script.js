@@ -62,14 +62,40 @@ const obs = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal, .reveal-l, .reveal-r').forEach(el => obs.observe(el));
 
 // Contact form
-function sendMsg(){
-  const n=document.getElementById('cf-name').value.trim();
-  const e=document.getElementById('cf-email').value.trim();
-  const m=document.getElementById('cf-msg').value.trim();
-  if(!n||!e||!m){ alert('FILL ALL FIELDS BEFORE TRANSMITTING.'); return; }
-  document.getElementById('cf-ok').style.display='block';
-  document.getElementById('cf-name').value='';
-  document.getElementById('cf-email').value='';
-  document.getElementById('cf-msg').value='';
-  setTimeout(()=>document.getElementById('cf-ok').style.display='none', 6000);
+function sendMsg() {
+  const n = document.getElementById('cf-name').value.trim();
+  const e = document.getElementById('cf-email').value.trim();
+  const m = document.getElementById('cf-msg').value.trim();
+  
+  if (!n || !e || !m) { 
+    alert('FILL ALL FIELDS BEFORE TRANSMITTING.'); 
+    return; 
+  }
+
+  // Send the data to Formspree in the background
+  fetch("https://formspree.io/f/maqpoqra", {
+    method: "POST",
+    headers: {
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ name: n, email: e, message: m })
+  })
+  .then(response => {
+    if (response.ok) {
+      // If Formspree receives it, trigger your original success UI
+      document.getElementById('cf-ok').style.display = 'block';
+      document.getElementById('cf-name').value = '';
+      document.getElementById('cf-email').value = '';
+      document.getElementById('cf-msg').value = '';
+      
+      // Hide the success message after 6 seconds
+      setTimeout(() => document.getElementById('cf-ok').style.display = 'none', 6000);
+    } else {
+      alert('TRANSMISSION FAILED. PLEASE CHECK YOUR CONNECTION.');
+    }
+  })
+  .catch(error => {
+    alert('NETWORK ERROR. PLEASE TRY AGAIN.');
+  });
 }
